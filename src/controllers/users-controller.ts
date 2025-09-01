@@ -6,7 +6,7 @@ import { z } from "zod"
 
 class UsersController {
   async create(request: Request, response: Response) {
-    // Criando validação dos dados da request.
+    // Criando a validação dos dados da request.
     const bodySchema = z.object({
       name: z.string().trim().min(2),
       email: z.string().email(),
